@@ -12,9 +12,12 @@
 		AEA499001D15848400E746AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEA498FE1D15848400E746AB /* Main.storyboard */; };
 		AEA499021D15848400E746AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEA499011D15848400E746AB /* Assets.xcassets */; };
 		AEA499051D15848400E746AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEA499031D15848400E746AB /* LaunchScreen.storyboard */; };
+		FE0F503EE707FCCB49405AEF /* libPods-SaveTheDot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3888C7EC36180FB819CA265 /* libPods-SaveTheDot.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04E426CABBB03EF367737706 /* Pods-SaveTheDot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaveTheDot.release.xcconfig"; path = "Pods/Target Support Files/Pods-SaveTheDot/Pods-SaveTheDot.release.xcconfig"; sourceTree = "<group>"; };
+		52EAB4CD17BBFD5D54B4A5E5 /* Pods-SaveTheDot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaveTheDot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SaveTheDot/Pods-SaveTheDot.debug.xcconfig"; sourceTree = "<group>"; };
 		AEA498F71D15848400E746AB /* SaveTheDot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveTheDot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA498FA1D15848400E746AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEA498FC1D15848400E746AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		AEA499011D15848400E746AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEA499041D15848400E746AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEA499061D15848400E746AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3888C7EC36180FB819CA265 /* libPods-SaveTheDot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SaveTheDot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE0F503EE707FCCB49405AEF /* libPods-SaveTheDot.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C562071DBEF0248D959EE77 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52EAB4CD17BBFD5D54B4A5E5 /* Pods-SaveTheDot.debug.xcconfig */,
+				04E426CABBB03EF367737706 /* Pods-SaveTheDot.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9171714EF7937F58AB9E77A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3888C7EC36180FB819CA265 /* libPods-SaveTheDot.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AEA498EE1D15848400E746AB = {
 			isa = PBXGroup;
 			children = (
 				AEA498F91D15848400E746AB /* SaveTheDot */,
 				AEA498F81D15848400E746AB /* Products */,
+				3C562071DBEF0248D959EE77 /* Pods */,
+				9171714EF7937F58AB9E77A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEA499091D15848400E746AB /* Build configuration list for PBXNativeTarget "SaveTheDot" */;
 			buildPhases = (
+				1CE4444806437BB44BFF9309 /* [CP] Check Pods Manifest.lock */,
 				AEA498F31D15848400E746AB /* Sources */,
 				AEA498F41D15848400E746AB /* Frameworks */,
 				AEA498F51D15848400E746AB /* Resources */,
+				9276F0D0B1750AD19E94B362 /* [CP] Embed Pods Frameworks */,
+				386A9AC839C90A2FE6B1E734 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1CE4444806437BB44BFF9309 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		386A9AC839C90A2FE6B1E734 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SaveTheDot/Pods-SaveTheDot-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9276F0D0B1750AD19E94B362 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SaveTheDot/Pods-SaveTheDot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AEA498F31D15848400E746AB /* Sources */ = {
@@ -254,6 +329,7 @@
 		};
 		AEA4990A1D15848400E746AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52EAB4CD17BBFD5D54B4A5E5 /* Pods-SaveTheDot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SaveTheDot/Info.plist;
@@ -266,6 +342,7 @@
 		};
 		AEA4990B1D15848400E746AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04E426CABBB03EF367737706 /* Pods-SaveTheDot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SaveTheDot/Info.plist;

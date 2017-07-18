@@ -1,0 +1,22 @@
+PODS:
+  - Firebase (2.5.0)
+  - MobileCenter (0.11.0):
+    - MobileCenter/Analytics (= 0.11.0)
+    - MobileCenter/Crashes (= 0.11.0)
+  - MobileCenter/Analytics (0.11.0):
+    - MobileCenter/Core
+  - MobileCenter/Core (0.11.0)
+  - MobileCenter/Crashes (0.11.0):
+    - MobileCenter/Core
+
+DEPENDENCIES:
+  - Firebase (= 2.5.0)
+  - MobileCenter
+
+SPEC CHECKSUMS:
+  Firebase: 744617c0733b45198f9486ebd5cac64ec2d10d79
+  MobileCenter: 918ffeab6f98aa0d9b617906d406f59e6bdbcbe2
+
+PODFILE CHECKSUM: ba8afa30b95b0d5e47d45389b8f9b8f20a2c676a
+
+COCOAPODS: 1.2.1
